@@ -1,0 +1,6 @@
+framework module Pods_LeanPokerTests {
+  umbrella header "Pods-LeanPokerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
