@@ -25,7 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSFontAttributeName: UIFont(name: "OpenSans-Regular", size: 20) ?? UIFont.systemFont(ofSize: 20)
         ]
         appearance.barTintColor = UIColor(red: 155/255, green: 89/255, blue: 182/255, alpha: 1)
-        window?.rootViewController = TournamentListViewController().embedInNavigationController()
+        let vc = TournamentListViewController()
+        let vm = TournamentListViewModel(with: vc)
+        vc.viewModel = vm
+        window?.rootViewController = vc.embedInNavigationController()
         window?.makeKeyAndVisible()
         return true
     }

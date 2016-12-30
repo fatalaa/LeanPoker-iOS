@@ -24,6 +24,11 @@
 		BB533F801DDA887600C9C18A /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB533F761DDA887600C9C18A /* OpenSans-Semibold.ttf */; };
 		BB533F811DDA887600C9C18A /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB533F771DDA887600C9C18A /* OpenSans-SemiboldItalic.ttf */; };
 		BB533F851DDA8F7200C9C18A /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB533F841DDA8F7200C9C18A /* NavigationController.swift */; };
+		BB5BBF451E16806E00993331 /* ClosureBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5BBF441E16806E00993331 /* ClosureBarButtonItem.swift */; };
+		BB5BBF471E169CD400993331 /* TournamentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5BBF461E169CD400993331 /* TournamentTableViewController.swift */; };
+		BB5BBF491E16A45900993331 /* TournamentMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5BBF481E16A45900993331 /* TournamentMapViewController.swift */; };
+		BB5BBF4C1E16C15400993331 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5BBF4B1E16C15400993331 /* HttpClient.swift */; };
+		BB5BBF4E1E16C91C00993331 /* TournamentListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5BBF4D1E16C91C00993331 /* TournamentListUseCase.swift */; };
 		BB9C27DE1E1492C10086BBE8 /* TournamentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9C27DD1E1492C10086BBE8 /* TournamentListViewModel.swift */; };
 		BBB98AD01DDA5633009A6A55 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB98ACF1DDA5633009A6A55 /* UIViewController+Extensions.swift */; };
 		C87779BFC73856A4EEF5AD38 /* Pods_LeanPokerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB37CDCA5F886A30F705C28 /* Pods_LeanPokerUITests.framework */; };
@@ -80,6 +85,11 @@
 		BB533F761DDA887600C9C18A /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Semibold.ttf"; path = "Supporting Files/Fonts/OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		BB533F771DDA887600C9C18A /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-SemiboldItalic.ttf"; path = "Supporting Files/Fonts/OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		BB533F841DDA8F7200C9C18A /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationController.swift; path = Common/View/NavigationController.swift; sourceTree = "<group>"; };
+		BB5BBF441E16806E00993331 /* ClosureBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClosureBarButtonItem.swift; path = Extensions/ClosureBarButtonItem.swift; sourceTree = "<group>"; };
+		BB5BBF461E169CD400993331 /* TournamentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TournamentTableViewController.swift; path = Modules/TournamentList/TournamentTableViewController.swift; sourceTree = "<group>"; };
+		BB5BBF481E16A45900993331 /* TournamentMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TournamentMapViewController.swift; path = Modules/TournamentList/TournamentMapViewController.swift; sourceTree = "<group>"; };
+		BB5BBF4B1E16C15400993331 /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpClient.swift; path = Common/Network/HttpClient.swift; sourceTree = "<group>"; };
+		BB5BBF4D1E16C91C00993331 /* TournamentListUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TournamentListUseCase.swift; path = Modules/TournamentList/TournamentListUseCase.swift; sourceTree = "<group>"; };
 		BB9C27DD1E1492C10086BBE8 /* TournamentListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TournamentListViewModel.swift; path = Modules/TournamentList/TournamentListViewModel.swift; sourceTree = "<group>"; };
 		BBB98ACF1DDA5633009A6A55 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extensions.swift"; path = "Extensions/UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		EEB37CDCA5F886A30F705C28 /* Pods_LeanPokerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeanPokerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +201,9 @@
 			children = (
 				BB0B6F4D1DD8F3D5007E896C /* TournamentListViewController.swift */,
 				BB9C27DD1E1492C10086BBE8 /* TournamentListViewModel.swift */,
+				BB5BBF461E169CD400993331 /* TournamentTableViewController.swift */,
+				BB5BBF481E16A45900993331 /* TournamentMapViewController.swift */,
+				BB5BBF4D1E16C91C00993331 /* TournamentListUseCase.swift */,
 			);
 			name = TournamentList;
 			sourceTree = "<group>";
@@ -226,6 +239,7 @@
 		BB533F821DDA8F3E00C9C18A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BB5BBF4A1E16BAAF00993331 /* Network */,
 				BB533F831DDA8F4600C9C18A /* View */,
 			);
 			name = Common;
@@ -239,10 +253,19 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		BB5BBF4A1E16BAAF00993331 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BB5BBF4B1E16C15400993331 /* HttpClient.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
 		BBB98ACE1DDA55FC009A6A55 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				BBB98ACF1DDA5633009A6A55 /* UIViewController+Extensions.swift */,
+				BB5BBF441E16806E00993331 /* ClosureBarButtonItem.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -549,8 +572,13 @@
 			files = (
 				BB0B6F4E1DD8F3D5007E896C /* TournamentListViewController.swift in Sources */,
 				BB9C27DE1E1492C10086BBE8 /* TournamentListViewModel.swift in Sources */,
+				BB5BBF491E16A45900993331 /* TournamentMapViewController.swift in Sources */,
 				BB533F851DDA8F7200C9C18A /* NavigationController.swift in Sources */,
+				BB5BBF4C1E16C15400993331 /* HttpClient.swift in Sources */,
 				BBB98AD01DDA5633009A6A55 /* UIViewController+Extensions.swift in Sources */,
+				BB5BBF4E1E16C91C00993331 /* TournamentListUseCase.swift in Sources */,
+				BB5BBF471E169CD400993331 /* TournamentTableViewController.swift in Sources */,
+				BB5BBF451E16806E00993331 /* ClosureBarButtonItem.swift in Sources */,
 				BB0B6F4C1DD8F3D5007E896C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -698,7 +726,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 40D7D6439B1578D34E3C60EF /* Pods-LeanPoker.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/LeanPoker/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -712,7 +740,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 48129E5C191B1C00E75778D1 /* Pods-LeanPoker.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/LeanPoker/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -726,7 +754,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B6F42CAA86D57C53F8EC6B37 /* Pods-LeanPokerTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = LeanPokerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -741,7 +769,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E6AC3E78F77B37CFE37F84C /* Pods-LeanPokerTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = LeanPokerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -756,7 +784,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9E26E002E1DEB8C42D447AF1 /* Pods-LeanPokerUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				INFOPLIST_FILE = LeanPokerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.leanpoker.LeanPokerUITests;
@@ -770,7 +798,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 74515C7D6622FCCF95CA27DE /* Pods-LeanPokerUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				INFOPLIST_FILE = LeanPokerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.leanpoker.LeanPokerUITests;

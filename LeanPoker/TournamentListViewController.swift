@@ -17,7 +17,7 @@ protocol TournamentListView {
 
 class TournamentListViewController: UIViewController, TournamentListView {
     
-    private var viewModel: TournamentListViewModelInterface
+    var viewModel: TournamentListViewModelInterface?
     
     private let disposeBag = DisposeBag()
     
@@ -42,15 +42,6 @@ class TournamentListViewController: UIViewController, TournamentListView {
         let view = UIView(frame: .zero)
         return view
     }()
-    
-    init(with viewModel: TournamentListViewModelInterface) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,8 +80,8 @@ class TournamentListViewController: UIViewController, TournamentListView {
             .value
             .asObservable()
             .subscribe(onNext: { [weak self] (newIndex) in
-                if let `self` = self {
-                    self.viewModel.listModel.value = TournamentListMode(rawValue: newIndex) ?? .list
+                if let `self` = self, let viewModel = self.viewModel {
+                    viewModel.listMode.value = TournamentListMode(rawValue: newIndex) ?? .list
                 }
             })
             .addDisposableTo(disposeBag)
@@ -99,11 +90,54 @@ class TournamentListViewController: UIViewController, TournamentListView {
     // MARK: TournamentListView
     
     func showList() {
-        
+        navigationItem.rightBarButtonItem = nil
+        if let childVC = childViewControllers.first {
+            if childVC.isKind(of: TournamentTableViewController.self) {
+                return
+            } else {
+                childVC.willMove(toParentViewController: nil)
+                childVC.view.removeFromSuperview()
+                childVC.removeFromParentViewController()
+                addListView()
+            }
+        } else {
+            addListView()
+        }
     }
     
     func showMap() {
-        
+        navigationItem.rightBarButtonItem = ClosureBarButtonItem(barButtonSystemItem: .refresh, handler: { [weak self] (item: ClosureBarButtonItem) in
+            if let `self` = self, let viewModel = self.viewModel {
+                viewModel.refreshHit.value = true
+            }
+        })
+        navigationItem.rightBarButtonItem?.tintColor = .white
+        if let childVC = childViewControllers.first {
+            if childVC.isKind(of: TournamentMapViewController.self) {
+                return
+            } else {
+                childVC.willMove(toParentViewController: nil)
+                childVC.view.removeFromSuperview()
+                childVC.removeFromParentViewController()
+                addMapView()
+            }
+        } else {
+            addMapView()
+        }
+    }
+    
+    private func addListView() {
+        let child = TournamentTableViewController()
+        addChildViewController(child)
+        containerView.addSubview(child.view)
+        child.didMove(toParentViewController: self)
+    }
+    
+    private func addMapView() {
+        let child = TournamentMapViewController()
+        addChildViewController(child)
+        containerView.addSubview(child.view)
+        child.didMove(toParentViewController: self)
     }
 }
 
