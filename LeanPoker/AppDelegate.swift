@@ -16,6 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let appearance = UINavigationBar.appearance()
+        appearance.barTintColor = .white
+        appearance.isTranslucent = false
+        appearance.titleTextAttributes = [
+            NSForegroundColorAttributeName: UIColor.white,
+            NSFontAttributeName: UIFont(name: "OpenSans-Regular", size: 20) ?? UIFont.systemFont(ofSize: 20)
+        ]
+        appearance.barTintColor = UIColor(red: 155/255, green: 89/255, blue: 182/255, alpha: 1)
+        window?.rootViewController = TournamentListViewController().embedInNavigationController()
+        window?.makeKeyAndVisible()
         return true
     }
 

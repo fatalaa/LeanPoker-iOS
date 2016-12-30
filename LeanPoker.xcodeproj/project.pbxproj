@@ -8,12 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		BB0B6F4C1DD8F3D5007E896C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0B6F4B1DD8F3D5007E896C /* AppDelegate.swift */; };
-		BB0B6F4E1DD8F3D5007E896C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0B6F4D1DD8F3D5007E896C /* ViewController.swift */; };
-		BB0B6F511DD8F3D5007E896C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB0B6F4F1DD8F3D5007E896C /* Main.storyboard */; };
+		BB0B6F4E1DD8F3D5007E896C /* TournamentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0B6F4D1DD8F3D5007E896C /* TournamentListViewController.swift */; };
 		BB0B6F531DD8F3D5007E896C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB0B6F521DD8F3D5007E896C /* Assets.xcassets */; };
 		BB0B6F561DD8F3D5007E896C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB0B6F541DD8F3D5007E896C /* LaunchScreen.storyboard */; };
 		BB0B6F611DD8F3D6007E896C /* LeanPokerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0B6F601DD8F3D6007E896C /* LeanPokerTests.swift */; };
 		BB0B6F6C1DD8F3D6007E896C /* LeanPokerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0B6F6B1DD8F3D6007E896C /* LeanPokerUITests.swift */; };
+		BB533F781DDA887600C9C18A /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB533F6E1DDA887600C9C18A /* OpenSans-Bold.ttf */; };
+		BB533F791DDA887600C9C18A /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB533F6F1DDA887600C9C18A /* OpenSans-BoldItalic.ttf */; };
+		BB533F7A1DDA887600C9C18A /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB533F701DDA887600C9C18A /* OpenSans-ExtraBold.ttf */; };
+		BB533F7B1DDA887600C9C18A /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB533F711DDA887600C9C18A /* OpenSans-ExtraBoldItalic.ttf */; };
+		BB533F7C1DDA887600C9C18A /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB533F721DDA887600C9C18A /* OpenSans-Italic.ttf */; };
+		BB533F7D1DDA887600C9C18A /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB533F731DDA887600C9C18A /* OpenSans-Light.ttf */; };
+		BB533F7E1DDA887600C9C18A /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB533F741DDA887600C9C18A /* OpenSans-LightItalic.ttf */; };
+		BB533F7F1DDA887600C9C18A /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB533F751DDA887600C9C18A /* OpenSans-Regular.ttf */; };
+		BB533F801DDA887600C9C18A /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB533F761DDA887600C9C18A /* OpenSans-Semibold.ttf */; };
+		BB533F811DDA887600C9C18A /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB533F771DDA887600C9C18A /* OpenSans-SemiboldItalic.ttf */; };
+		BB533F851DDA8F7200C9C18A /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB533F841DDA8F7200C9C18A /* NavigationController.swift */; };
+		BB9C27DE1E1492C10086BBE8 /* TournamentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9C27DD1E1492C10086BBE8 /* TournamentListViewModel.swift */; };
+		BBB98AD01DDA5633009A6A55 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB98ACF1DDA5633009A6A55 /* UIViewController+Extensions.swift */; };
 		C87779BFC73856A4EEF5AD38 /* Pods_LeanPokerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB37CDCA5F886A30F705C28 /* Pods_LeanPokerUITests.framework */; };
 		D2C2188F3B5DC5790E288258 /* Pods_LeanPokerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9178BAD5ECF3F35EDB601FCD /* Pods_LeanPokerTests.framework */; };
 		E5EDCF24FB95E16FAA1AB67F /* Pods_LeanPoker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B811E1014EC485DC3C36FBDE /* Pods_LeanPoker.framework */; };
@@ -47,17 +59,29 @@
 		B811E1014EC485DC3C36FBDE /* Pods_LeanPoker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeanPoker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB0B6F481DD8F3D5007E896C /* LeanPoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeanPoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB0B6F4B1DD8F3D5007E896C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB0B6F4D1DD8F3D5007E896C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BB0B6F501DD8F3D5007E896C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BB0B6F521DD8F3D5007E896C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB0B6F4D1DD8F3D5007E896C /* TournamentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentListViewController.swift; sourceTree = "<group>"; };
+		BB0B6F521DD8F3D5007E896C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Supporting Files/Assets.xcassets"; sourceTree = "<group>"; };
 		BB0B6F551DD8F3D5007E896C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BB0B6F571DD8F3D5007E896C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB0B6F571DD8F3D5007E896C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
 		BB0B6F5C1DD8F3D6007E896C /* LeanPokerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeanPokerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB0B6F601DD8F3D6007E896C /* LeanPokerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeanPokerTests.swift; sourceTree = "<group>"; };
 		BB0B6F621DD8F3D6007E896C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB0B6F671DD8F3D6007E896C /* LeanPokerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeanPokerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB0B6F6B1DD8F3D6007E896C /* LeanPokerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeanPokerUITests.swift; sourceTree = "<group>"; };
 		BB0B6F6D1DD8F3D6007E896C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB533F6E1DDA887600C9C18A /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "Supporting Files/Fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		BB533F6F1DDA887600C9C18A /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-BoldItalic.ttf"; path = "Supporting Files/Fonts/OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		BB533F701DDA887600C9C18A /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-ExtraBold.ttf"; path = "Supporting Files/Fonts/OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		BB533F711DDA887600C9C18A /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-ExtraBoldItalic.ttf"; path = "Supporting Files/Fonts/OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		BB533F721DDA887600C9C18A /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Italic.ttf"; path = "Supporting Files/Fonts/OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		BB533F731DDA887600C9C18A /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "Supporting Files/Fonts/OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		BB533F741DDA887600C9C18A /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-LightItalic.ttf"; path = "Supporting Files/Fonts/OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		BB533F751DDA887600C9C18A /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "Supporting Files/Fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		BB533F761DDA887600C9C18A /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Semibold.ttf"; path = "Supporting Files/Fonts/OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		BB533F771DDA887600C9C18A /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-SemiboldItalic.ttf"; path = "Supporting Files/Fonts/OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		BB533F841DDA8F7200C9C18A /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationController.swift; path = Common/View/NavigationController.swift; sourceTree = "<group>"; };
+		BB9C27DD1E1492C10086BBE8 /* TournamentListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TournamentListViewModel.swift; path = Modules/TournamentList/TournamentListViewModel.swift; sourceTree = "<group>"; };
+		BBB98ACF1DDA5633009A6A55 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extensions.swift"; path = "Extensions/UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		EEB37CDCA5F886A30F705C28 /* Pods_LeanPokerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeanPokerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -127,12 +151,11 @@
 		BB0B6F4A1DD8F3D5007E896C /* LeanPoker */ = {
 			isa = PBXGroup;
 			children = (
+				BB533F821DDA8F3E00C9C18A /* Common */,
+				BB533F6C1DDA876300C9C18A /* Supporting Files */,
+				BB533F6A1DDA847500C9C18A /* Modules */,
+				BBB98ACE1DDA55FC009A6A55 /* Extensions */,
 				BB0B6F4B1DD8F3D5007E896C /* AppDelegate.swift */,
-				BB0B6F4D1DD8F3D5007E896C /* ViewController.swift */,
-				BB0B6F4F1DD8F3D5007E896C /* Main.storyboard */,
-				BB0B6F521DD8F3D5007E896C /* Assets.xcassets */,
-				BB0B6F541DD8F3D5007E896C /* LaunchScreen.storyboard */,
-				BB0B6F571DD8F3D5007E896C /* Info.plist */,
 			);
 			path = LeanPoker;
 			sourceTree = "<group>";
@@ -153,6 +176,75 @@
 				BB0B6F6D1DD8F3D6007E896C /* Info.plist */,
 			);
 			path = LeanPokerUITests;
+			sourceTree = "<group>";
+		};
+		BB533F6A1DDA847500C9C18A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				BB533F6B1DDA847C00C9C18A /* TournamentList */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		BB533F6B1DDA847C00C9C18A /* TournamentList */ = {
+			isa = PBXGroup;
+			children = (
+				BB0B6F4D1DD8F3D5007E896C /* TournamentListViewController.swift */,
+				BB9C27DD1E1492C10086BBE8 /* TournamentListViewModel.swift */,
+			);
+			name = TournamentList;
+			sourceTree = "<group>";
+		};
+		BB533F6C1DDA876300C9C18A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB533F6D1DDA883900C9C18A /* Fonts */,
+				BB0B6F521DD8F3D5007E896C /* Assets.xcassets */,
+				BB0B6F541DD8F3D5007E896C /* LaunchScreen.storyboard */,
+				BB0B6F571DD8F3D5007E896C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BB533F6D1DDA883900C9C18A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BB533F6E1DDA887600C9C18A /* OpenSans-Bold.ttf */,
+				BB533F6F1DDA887600C9C18A /* OpenSans-BoldItalic.ttf */,
+				BB533F701DDA887600C9C18A /* OpenSans-ExtraBold.ttf */,
+				BB533F711DDA887600C9C18A /* OpenSans-ExtraBoldItalic.ttf */,
+				BB533F721DDA887600C9C18A /* OpenSans-Italic.ttf */,
+				BB533F731DDA887600C9C18A /* OpenSans-Light.ttf */,
+				BB533F741DDA887600C9C18A /* OpenSans-LightItalic.ttf */,
+				BB533F751DDA887600C9C18A /* OpenSans-Regular.ttf */,
+				BB533F761DDA887600C9C18A /* OpenSans-Semibold.ttf */,
+				BB533F771DDA887600C9C18A /* OpenSans-SemiboldItalic.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		BB533F821DDA8F3E00C9C18A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BB533F831DDA8F4600C9C18A /* View */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		BB533F831DDA8F4600C9C18A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BB533F841DDA8F7200C9C18A /* NavigationController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BBB98ACE1DDA55FC009A6A55 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BBB98ACF1DDA5633009A6A55 /* UIViewController+Extensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		BE313E6EF478093448211522 /* Frameworks */ = {
@@ -281,9 +373,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB533F7F1DDA887600C9C18A /* OpenSans-Regular.ttf in Resources */,
+				BB533F801DDA887600C9C18A /* OpenSans-Semibold.ttf in Resources */,
 				BB0B6F561DD8F3D5007E896C /* LaunchScreen.storyboard in Resources */,
+				BB533F7B1DDA887600C9C18A /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				BB533F811DDA887600C9C18A /* OpenSans-SemiboldItalic.ttf in Resources */,
+				BB533F7D1DDA887600C9C18A /* OpenSans-Light.ttf in Resources */,
 				BB0B6F531DD8F3D5007E896C /* Assets.xcassets in Resources */,
-				BB0B6F511DD8F3D5007E896C /* Main.storyboard in Resources */,
+				BB533F791DDA887600C9C18A /* OpenSans-BoldItalic.ttf in Resources */,
+				BB533F781DDA887600C9C18A /* OpenSans-Bold.ttf in Resources */,
+				BB533F7A1DDA887600C9C18A /* OpenSans-ExtraBold.ttf in Resources */,
+				BB533F7C1DDA887600C9C18A /* OpenSans-Italic.ttf in Resources */,
+				BB533F7E1DDA887600C9C18A /* OpenSans-LightItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +462,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B8863BDA07B716582C3EA351 /* [CP] Check Pods Manifest.lock */ = {
@@ -376,7 +477,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F30ACF3CFB8BA6FA18DE7F27 /* [CP] Check Pods Manifest.lock */ = {
@@ -391,7 +492,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F9F06E8D7C1A592AC5AEB024 /* [CP] Embed Pods Frameworks */ = {
@@ -446,7 +547,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB0B6F4E1DD8F3D5007E896C /* ViewController.swift in Sources */,
+				BB0B6F4E1DD8F3D5007E896C /* TournamentListViewController.swift in Sources */,
+				BB9C27DE1E1492C10086BBE8 /* TournamentListViewModel.swift in Sources */,
+				BB533F851DDA8F7200C9C18A /* NavigationController.swift in Sources */,
+				BBB98AD01DDA5633009A6A55 /* UIViewController+Extensions.swift in Sources */,
 				BB0B6F4C1DD8F3D5007E896C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,20 +587,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BB0B6F4F1DD8F3D5007E896C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BB0B6F501DD8F3D5007E896C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BB0B6F541DD8F3D5007E896C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BB0B6F551DD8F3D5007E896C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -520,6 +617,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -570,6 +668,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -599,8 +698,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 40D7D6439B1578D34E3C60EF /* Pods-LeanPoker.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = LeanPoker/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LeanPoker/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.leanpoker.LeanPoker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -612,8 +712,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 48129E5C191B1C00E75778D1 /* Pods-LeanPoker.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = LeanPoker/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LeanPoker/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.leanpoker.LeanPoker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -698,6 +799,7 @@
 				BB0B6F721DD8F3D6007E896C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BB0B6F731DD8F3D6007E896C /* Build configuration list for PBXNativeTarget "LeanPokerTests" */ = {
 			isa = XCConfigurationList;
@@ -706,6 +808,7 @@
 				BB0B6F751DD8F3D6007E896C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BB0B6F761DD8F3D6007E896C /* Build configuration list for PBXNativeTarget "LeanPokerUITests" */ = {
 			isa = XCConfigurationList;
@@ -714,6 +817,7 @@
 				BB0B6F781DD8F3D6007E896C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

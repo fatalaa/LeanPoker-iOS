@@ -1,15 +1,36 @@
 PODS:
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
   - ObjectMapper (2.2.1)
+  - RxCocoa (3.0.1):
+    - RxSwift (~> 3.0)
   - RxSwift (3.0.1)
+  - Swinject (2.0.0-beta.2)
 
 DEPENDENCIES:
+  - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - ObjectMapper (~> 2.0)
+  - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
+  - Swinject (= 2.0.0-beta.2)
+
+EXTERNAL SOURCES:
+  ChameleonFramework:
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+CHECKOUT OPTIONS:
+  ChameleonFramework:
+    :commit: dcf98f9bf3a632a7f40679b7da46f09681e48526
+    :git: https://github.com/ViccAlexander/Chameleon.git
 
 SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   ObjectMapper: 41e43e1a89f8060ef5ea5d04ba852e269a621d68
+  RxCocoa: 15a52fc590dcc700cb4a690a633b5c5184ce3a78
   RxSwift: af5680055c4ad04480189c52d28385b1029493a6
+  Swinject: 69a893192efa9f2cc44be79ef423d04d571b6af9
 
-PODFILE CHECKSUM: f6cde45e876bb0e5cc123efdce58ee25f82285c8
+PODFILE CHECKSUM: 6b18ed1d2c0e68a5c25abf66f35478ba05756b29
 
 COCOAPODS: 1.1.1

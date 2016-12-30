@@ -6,8 +6,11 @@ target 'LeanPoker' do
   use_frameworks!
 
   # Pods for LeanPoker
-  pod 'RxSwift', '~> 3.0'
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
   pod 'ObjectMapper', '~> 2.0'
+  pod 'RxCocoa', '~> 3.0'
+  pod 'RxSwift', '~> 3.0'
+  pod 'Swinject', '2.0.0-beta.2'
 
   target 'LeanPokerTests' do
     inherit! :search_paths
