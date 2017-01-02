@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ]
         appearance.barTintColor = UIColor(red: 155/255, green: 89/255, blue: 182/255, alpha: 1)
         let vc = TournamentListViewController()
-        let vm = TournamentListViewModel(with: vc)
+        let vm = TournamentListViewModel(with: vc, useCase: TournamentListUseCase(with: HttpClient(with: "http://live.leanpoker.org/api", session: URLSession.shared)))
         vc.viewModel = vm
         window?.rootViewController = vc.embedInNavigationController()
         window?.makeKeyAndVisible()

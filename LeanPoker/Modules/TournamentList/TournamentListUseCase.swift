@@ -10,18 +10,31 @@ import Foundation
 import RxSwift
 
 protocol TournamentListUseCaseInterface {
-    func fetchTournaments() -> Observable<(HTTPURLResponse,Data)>
+    func fetchTournaments() -> Observable<[TournamentResponseModel]>
 }
 
-struct TournamentListUseCase: TournamentListUseCaseInterface {
+typealias TournamentListJSONMapper = JSONMapper<TournamentResponseModel>
+
+class TournamentListUseCase: TournamentListUseCaseInterface {
+    
     private let httpClient: Networking
+    
+    private let jsonMapper = TournamentListJSONMapper()
     
     init(with httpClient: Networking) {
         self.httpClient = httpClient
     }
     
-    func fetchTournaments() -> Observable<(HTTPURLResponse, Data)> {
-        return httpClient.get(path: "tournament")
+    func fetchTournaments() -> Observable<[TournamentResponseModel]> {
+        return httpClient
+            .get(path: "tournament")
+            .map({ [weak self] (response) -> [TournamentResponseModel] in
+                if let `self` = self, let result = self.jsonMapper.mapArray(JSON: response) {
+                    return result
+                } else {
+                    return []
+                }
+            })
     }
 }
 

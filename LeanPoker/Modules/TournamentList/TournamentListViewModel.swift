@@ -17,6 +17,7 @@ enum TournamentListMode: Int {
 protocol TournamentListViewModelInterface {
     var listMode: Variable<TournamentListMode> {get set}
     var refreshHit: Variable<Bool> {get set}
+    var tournaments: Observable<[TournamentResponseModel]>? {get set}
 }
 
 class TournamentListViewModel: TournamentListViewModelInterface {
@@ -25,12 +26,17 @@ class TournamentListViewModel: TournamentListViewModelInterface {
     
     let disposeBag = DisposeBag()
     
+    let tournamentsUseCase: TournamentListUseCaseInterface
+    
     var listMode: Variable<TournamentListMode> = Variable(.list)
     
     var refreshHit: Variable<Bool> = Variable(false)
     
-    init(with view: TournamentListView) {
+    var tournaments: Observable<[TournamentResponseModel]>?
+    
+    init(with view: TournamentListView, useCase: TournamentListUseCaseInterface) {
         self.view = view
+        self.tournamentsUseCase = useCase
         setupBindings()
     }
     
@@ -52,8 +58,16 @@ class TournamentListViewModel: TournamentListViewModelInterface {
         
         refreshHit
             .asObservable()
-            .subscribe(onNext: { (refreshHit) in
-                print("Refresh hit with value: \(refreshHit)")
+            .subscribe(onNext: { [weak self] (refreshHit) in
+                if let `self` = self, refreshHit {
+                    self.tournaments = self.tournamentsUseCase.fetchTournaments()
+                    if let tournaments = self.tournaments {
+                        tournaments.subscribe(onNext: { [weak self] (response) in
+                            print("Response: \(response)")
+                        })
+                        .addDisposableTo(self.disposeBag)
+                    }
+                }
             })
             .addDisposableTo(disposeBag)
     }

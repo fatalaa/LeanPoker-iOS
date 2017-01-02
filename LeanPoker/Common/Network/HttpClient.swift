@@ -11,7 +11,7 @@ import RxCocoa
 import RxSwift
 
 protocol Networking {
-    func get(path: String) -> Observable<(HTTPURLResponse,Data)>
+    func get(path: String) -> Observable<Any>
 }
 
 struct HttpClient {
@@ -26,11 +26,11 @@ struct HttpClient {
 }
 
 extension HttpClient: Networking {
-    func get(path: String) -> Observable<(HTTPURLResponse, Data)> {
+    func get(path: String) -> Observable<Any> {
         guard let url = URL(string: "\(baseURL)/\(path)") else {
             return Observable.error(RxCocoaURLError.unknown)
         }
         let request = URLRequest(url: url)
-        return session.rx.response(request: request)
+        return session.rx.json(request: request)
     }
 }
